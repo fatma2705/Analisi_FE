@@ -14,7 +14,7 @@ export class AuthService {
   httpClient = inject(HttpClient);
   baseUrl = 'http://localhost:8080/api/auth';
 
-  signup(data: any){
+  register(data: any){
     return this.httpClient.post('${this.baseUrl}/register',data);
   }
 
