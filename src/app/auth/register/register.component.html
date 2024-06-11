@@ -4,7 +4,10 @@
         <span>Already have an account? <a routerLink="/login">Sign In</a></span>
     </div>
     <form class="form-group" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <input type="text" name="name" placeholder="Name" formControlName="name">
+        <input type="text" name="nome" placeholder="Nome" formControlName="nome">
+        <input type="text" name="cognome" placeholder="Cognome" formControlName="cognome">
+        <input type="text" name="codiceFiscale" placeholder="Codice Fiscale" formControlName="codiceFiscale">
+        <input type="text" name="username" placeholder="Username" formControlName="username">
         <input type="email" name="email" placeholder="Email" formControlName="email">
         <input type="password" name="password" placeholder="Password" formControlName="password">
         <input type="submit" value="Signup">
