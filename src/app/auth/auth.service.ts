@@ -15,13 +15,13 @@ export class AuthService {
   baseUrl = 'http://localhost:8080/api/auth';
 
   register(data: any){
-    return this.httpClient.post('${this.baseUrl}/register',data);
+    return this.httpClient.post(`${this.baseUrl}/register`, data);
   }
 
   login(data: any){
-    return this.httpClient.post('${this.baseUrl}/login',data)
+    return this.httpClient.post(`${this.baseUrl}/login`, data)
     .pipe(tap((result) => {
-      localStorage.setItem('authUser',JSON.stringify(result));
+      localStorage.setItem('authUser', JSON.stringify(result));
     }));
   }
 
