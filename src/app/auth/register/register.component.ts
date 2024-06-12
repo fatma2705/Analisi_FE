@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { inject } from '@angular/core';
-import { FormControl,FormGroup,ReactiveFormsModule,Validators } from '@angular/forms';
+import { AbstractControl, FormControl,FormGroup,ReactiveFormsModule,Validators } from '@angular/forms';
 import { Router,RouterModule } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterModule],
+  imports: [ReactiveFormsModule,RouterModule,NgIf],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
@@ -17,13 +18,19 @@ export class RegisterComponent {
   router = inject(Router);
 
   public registerForm = new FormGroup({
-    username: new FormControl('',[Validators.required]),
-    email: new FormControl('',[Validators.required,Validators.email]),
-    password: new FormControl('',[Validators.required]),
-    nome: new FormControl('',[Validators.required]),
-    cognome: new FormControl('',[Validators.required]),
-    codiceFiscale: new FormControl('',[Validators.required]),
-  })
+    username: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
+    confermaPassword: new FormControl('', [Validators.required]),
+    nome: new FormControl('', [Validators.required]),
+    cognome: new FormControl('', [Validators.required]),
+    codiceFiscale: new FormControl('', [Validators.required]),
+  }, { validators: this.passwordMatchValidator });
+
+   passwordMatchValidator(form: AbstractControl) {
+    return form.get('password')?.value === form.get('confermaPassword')?.value
+      ? null : { 'mismatch': true };
+  }
 
   public onSubmit() {
     if (this.registerForm.valid) {
@@ -38,5 +45,9 @@ export class RegisterComponent {
       });
     }
   }
+
+
+ 
+
 
 }
