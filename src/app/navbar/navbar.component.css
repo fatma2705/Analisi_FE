@@ -1,0 +1,68 @@
+/* Stili di base per il navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo del navbar */
+.navbar-logo img {
+  height: 40px;
+}
+
+/* Stili per la lista dei link */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 10px;
+}
+
+/* Stili per i link */
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+/* Stili per le azioni del navbar */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-actions button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar-actions button:hover {
+  background-color: #45a049;
+}
+
+/* Risoluzione dei problemi di nidificazione dell'elemento <a> */
+.navbar-actions button a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-actions button a:hover {
+  color: white;
+}
