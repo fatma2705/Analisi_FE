@@ -49,3 +49,9 @@
     font-size: 26px;
     font-weight: bold;
 }
+
+.error-message {
+  color: red;
+  border: 1px solid red;
+  padding: 10px;
+}

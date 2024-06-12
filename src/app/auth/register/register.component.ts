@@ -4,11 +4,12 @@ import { AbstractControl, FormControl,FormGroup,ReactiveFormsModule,Validators }
 import { Router,RouterModule } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { NgIf } from '@angular/common';
+import { NavbarComponent } from '../../navbar/navbar.component';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterModule,NgIf],
+  imports: [ReactiveFormsModule,RouterModule,NgIf,NavbarComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
