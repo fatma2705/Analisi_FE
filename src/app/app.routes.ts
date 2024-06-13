@@ -4,6 +4,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AdminComponent } from './auth/admin/admin.component';
 import { authGuard } from './auth/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { AnalysisListComponent } from './analysis/analysis-list/analysis-list.component';
 
 export const routes: Routes = [
     {
@@ -21,5 +22,9 @@ export const routes: Routes = [
 
     {
         path: 'admin', component: AdminComponent, canActivate: [authGuard]
+    },
+    {
+        path: 'analysis/list', component: AnalysisListComponent, canActivate: [authGuard] 
     }
+
 ];

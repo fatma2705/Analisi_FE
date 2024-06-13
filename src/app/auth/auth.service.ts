@@ -48,5 +48,9 @@ export class AuthService {
   return throwError(() => new Error(errorMessage));
 }
 
+isAdmin(): boolean {
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+  return user.role === 'admin';
+}
 
 }
