@@ -1,9 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { inject } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 
 
 @Injectable({
@@ -11,9 +9,18 @@ import { catchError } from 'rxjs/operators';
 })
 export class AuthService {
 
-  constructor() { }
-
   httpClient = inject(HttpClient);
+  
+  private _tokenStorage: any = null;
+
+  public set tokenStorage(value: any) {
+    this._tokenStorage = value;
+  }
+  
+  public get tokenStorage(): any {
+    return this._tokenStorage;
+  }
+
   baseUrl = 'http://localhost:8080/api/auth';
 
   register(data: any){
@@ -22,17 +29,17 @@ export class AuthService {
 
   login(data: any){
     return this.httpClient.post(`${this.baseUrl}/login`, data)
-    .pipe(tap((result) => {
-      localStorage.setItem('authUser', JSON.stringify(result));
+    .pipe(tap((result:any) => {
+      this.tokenStorage = result['jwt.token'];
     }));
   }
 
   logout(){
-    localStorage.removeItem('authUser');
+    this.tokenStorage = null;
   }
 
   isLoggedIn() {
-    return localStorage.getItem('authUser') !== null;
+    return this.tokenStorage !== null;
   }
 
   private handleError(error: any): Observable<never> {
@@ -46,11 +53,6 @@ export class AuthService {
   }
   console.error('An error occurred:', errorMessage);
   return throwError(() => new Error(errorMessage));
-}
-
-isAdmin(): boolean {
-  const user = JSON.parse(localStorage.getItem('user') || '{}');
-  return user.role === 'admin';
 }
 
 }
