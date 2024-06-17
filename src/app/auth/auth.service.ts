@@ -2,6 +2,7 @@ import { Inject, Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
+import { jwtDecode } from 'jwt-decode';
 
 
 @Injectable({
@@ -55,4 +56,14 @@ export class AuthService {
   return throwError(() => new Error(errorMessage));
 }
 
+
+  
+
+   getUserName(): string | null {
+    const token = this.tokenStorage;
+     const decodedToken: any = jwtDecode(token);
+     console.log(decodedToken.nome);
+      return decodedToken.nome; 
+   }
 }
+

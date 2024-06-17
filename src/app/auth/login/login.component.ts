@@ -30,7 +30,7 @@ export class LoginComponent {
     this.authService.login(this.loginForm.value).subscribe({
       next: (data: any) => {
         if (this.authService.isLoggedIn()) {
-          this.router.navigate(['/analysis/list']);
+          this.router.navigate(['/analysis/home']);
         }
         console.log(data);
       },

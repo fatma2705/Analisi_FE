@@ -1,23 +1,22 @@
+<app-navbar></app-navbar>
 <div class="analisi-list-container">
   <h2>Lista Analisi</h2>
   <table>
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Esito Positivo</th>
         <th>Tipo</th>
         <th>Data</th>
         <th>Paziente</th>
+        <th>Esito Positivo</th>
         <th>Azioni</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let analysis of analysis">
-        <td>{{ analysis.id }}</td>
-        <td>{{ analysis.esitoPositivo ? 'Sì' : 'No' }}</td>
         <td>{{ analysis.tipo }}</td>
         <td>{{ analysis.data }}</td>
         <td>{{ analysis.paziente?.nome }} {{ analysis.paziente?.cognome }}</td>
+        <td>{{ analysis.esitoPositivo ? 'Sì' : 'No' }}</td>
       </tr>
     </tbody>
   </table>
