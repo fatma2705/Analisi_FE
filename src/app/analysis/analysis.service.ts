@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Analysis } from '../models/analysis.model'; // Assicurati di avere un modello Analysis definito
+import { Analysis } from '../models/analysis.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +16,7 @@ export class AnalysisService {
     return this.http.get<Analysis[]>(this.apiUrl);
   }
 
-
-  getAnalisiById(id: number): Observable<Analysis>{
+  getAnalisiById(id: number): Observable<Analysis> {
     return this.http.get<Analysis>(`${this.apiUrl}/${id}`);
   }
-
 }

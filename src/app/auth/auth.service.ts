@@ -30,7 +30,7 @@ export class AuthService {
   login(data: any){
     return this.httpClient.post(`${this.baseUrl}/login`, data)
     .pipe(tap((result:any) => {
-      this.tokenStorage = result['jwt.token'];
+      this.tokenStorage = result.jwt;
     }));
   }
 
