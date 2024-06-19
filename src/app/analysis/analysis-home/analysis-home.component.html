@@ -1,24 +1,21 @@
 <div class="container">
-<div class="welcome-message">
-    Bello Rivederti , {{ userName }}!
-  </div>
+ 
   <div class="row">
-    <!-- Prima colonna -->
-    <div class="col">
-      <div class="image-container">
-        <img src="assets/analysis-home-list.jpg" alt="Immagine 1">
-      </div>
-      <p>Testo sotto la prima immagine</p>
-      <div class="button" (click)="onClickButton1()">CLICK ME 1</div>
+    <!-- Colonna del messaggio di benvenuto -->
+    <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+    <p class="welcome-message">Bello Rivederti, {{ userName }}! </p>
+      <p class="text-center">
+Benvenuto/a nella tua area personale, il luogo dove puoi gestire con facilità tutte le tue analisi. Qui hai il pieno controllo delle tue informazioni: cliccando sul pulsante sottostante, potrai accedere a una panoramica completa delle tue analisi. Non solo potrai visualizzarle tutte, ma avrai anche la possibilità di eliminarle, esaminare ogni dettaglio specifico e ricercarle rapidamente grazie a strumenti intuitivi. Approfitta di questa area dedicata per monitorare e organizzare le tue analisi con efficienza e semplicità. Buona navigazione!</p>
+      <div class="button mt-3" (click)="onClickButton1()">Visualizza le Tue Analisi</div>
     </div>
 
-    <!-- Seconda colonna -->
-    <div class="col">
+    
+
+    <!-- Colonna con l'immagine -->
+    <div class="col-6 d-flex justify-content-center align-items-center">
       <div class="image-container">
-        <img src="assets/analysis-home.jpg" alt="Immagine 2">
+        <img src="assets/analysis-home-list.jpg" alt="Immagine 2" class="img-fluid">
       </div>
-      <p>Testo sotto la seconda immagine</p>
-      <div class="button" (click)="onClickButton1()">CLICK ME 2</div>
     </div>
   </div>
 </div>

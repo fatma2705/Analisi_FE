@@ -1,88 +1,49 @@
-/* styles.scss */
-
 .container {
-  max-width: 1200px; /* Larghezza massima del contenitore */
-  margin: 0 auto; /* Centrare il contenitore */
-  padding: 20px; /* Spaziatura interna */
+  padding: 100px;
 }
 
 .welcome-message {
-  font-size: 24px; /* Dimensione del testo del messaggio di benvenuto */
-  font-weight: bold; /* Grassetto per il testo del messaggio di benvenuto */
-  text-align: center; /* Allinea il messaggio di benvenuto al centro */
-  margin-bottom: 20px; /* Spazio inferiore */
-}
-
-.col {
-  padding: 10px; /* Spaziatura interna delle colonne */
-  text-align: center; /* Allinea il contenuto al centro */
-}
-
-img {
-  max-width: 100%; /* Immagine occupa al massimo la larghezza della colonna */
-  height: auto; /* Altezza proporzionale all'immagine */
-  display: block; /* Rimuove il margine inferiore */
-  margin: 0 auto 10px; /* Margin bottom per allineamento */
-}
-
-p {
-  font-size: 16px; /* Dimensione del testo */
-}
-
-.button {
-  background-color: #007bff; /* Colore di sfondo del bottone */
-  color: #fff; /* Colore del testo del bottone */
-  padding: 10px 20px; /* Spaziatura interna del bottone */
-  display: inline-block; /* Mostra il bottone come inline-block */
-  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-  margin-top: 10px; /* Spazio superiore del bottone */
-}
-
-.button:hover {
-  background-color: #0056b3; /* Cambia il colore di sfondo al passaggio del mouse */
-}
-/* styles.scss */
-
-.container {
-  max-width: 1200px; /* Larghezza massima del contenitore */
-  margin: 0 auto; /* Centrare il contenitore */
-  padding: 20px; /* Spaziatura interna */
+ text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-right: 450px;
 }
 
 .row {
-  display: flex; /* Utilizza il flexbox per allineare le colonne */
+  display: flex;
+  align-items: center;
 }
 
-.col {
-  flex: 1; /* Flessibilità delle colonne, occupano lo stesso spazio */
-  padding: 10px; /* Spaziatura interna delle colonne */
-  text-align: center; /* Allinea il contenuto al centro */
+.col-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-container {
-  margin-bottom: 10px; /* Spazio inferiore per allineare le immagini */
+.image-container img {
+  width: 550px;
+  height: 500px;
 }
 
-img {
-  max-width: 100%; /* Immagine occupa al massimo la larghezza della colonna */
-  height: auto; /* Altezza proporzionale all'immagine */
-  display: block; /* Rimuove il margine inferiore */
-  margin: 0 auto; /* Centra l'immagine */
-}
 
-p {
-  font-size: 16px; /* Dimensione del testo */
-}
 
 .button {
-  background-color: #007bff; /* Colore di sfondo del bottone */
-  color: #fff; /* Colore del testo del bottone */
-  padding: 10px 20px; /* Spaziatura interna del bottone */
-  display: inline-block; /* Mostra il bottone come inline-block */
-  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-  margin-top: 10px; /* Spazio superiore del bottone */
+  margin-top: 100px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
 }
 
 .button:hover {
-  background-color: #0056b3; /* Cambia il colore di sfondo al passaggio del mouse */
+  background-color: #0056b3;
+}
+
+.text-center {
+  text-align: left;
+  margin-top: 70px;
 }

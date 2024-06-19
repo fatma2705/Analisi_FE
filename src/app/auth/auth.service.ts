@@ -42,7 +42,6 @@ export class AuthService {
   isLoggedIn() {
     return this.tokenStorage !== null;
   }
-
   private handleError(error: any): Observable<never> {
   let errorMessage = 'Errore di autenticazione';
   if (error.error instanceof ErrorEvent) {
@@ -62,7 +61,6 @@ export class AuthService {
    getUserName(): string | null {
     const token = this.tokenStorage;
      const decodedToken: any = jwtDecode(token);
-     console.log(decodedToken.nome);
       return decodedToken.nome; 
    }
 }

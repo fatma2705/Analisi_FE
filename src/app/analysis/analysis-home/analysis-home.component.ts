@@ -19,17 +19,18 @@ constructor(private router: Router, private authService: AuthService) { }
 
     
     ngOnInit() {
-      console.log('ggggggg');
     const userName = this.authService.getUserName();
-    console.log('username dentro home ' + userName);
     if (userName) {
       this.userName = userName.toUpperCase();
     }
   }
 
   onClickButton1() {
-    // Gestisci l'azione del primo bottone
     console.log('Button 1 clicked');
+     if (this.authService.isLoggedIn()) {
+          this.router.navigate(['/analysis/list']);
+        }
+    
   }
 
 
