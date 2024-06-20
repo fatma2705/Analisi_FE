@@ -17,6 +17,17 @@
         <td>{{ analysis.data }}</td>
         <td>{{ analysis.paziente?.nome }} {{ analysis.paziente?.cognome }}</td>
         <td>{{ analysis.esitoPositivo ? 'Sì' : 'No' }}</td>
+        <td>
+  <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'edit']" class="custom-button-primary">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'view']" class="custom-button-accent">
+    <mat-icon>visibility</mat-icon>
+  </button>
+  <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'delete']" class="custom-button-warn">
+    <mat-icon>delete</mat-icon>
+  </button>
+</td>
       </tr>
     </tbody>
   </table>

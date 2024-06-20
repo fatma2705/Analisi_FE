@@ -6,6 +6,7 @@ import { authGuard } from './auth/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { AnalysisListComponent } from './analysis/analysis-list/analysis-list.component';
 import { AnalysisHomeComponent } from './analysis/analysis-home/analysis-home.component';
+import { AnalysisDetailComponent } from './analysis/analysis-detail/analysis-detail.component';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,9 @@ export const routes: Routes = [
     },
     {
         path: 'analysis/home', component: AnalysisHomeComponent, canActivate: [authGuard] 
+    },
+    {
+        path: 'analysis/:id/:action' , component:AnalysisDetailComponent
     }
 
 

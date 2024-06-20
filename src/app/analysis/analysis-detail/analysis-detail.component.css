@@ -1,0 +1,121 @@
+/* Contenitore principale */
+.analysis-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffe6f2; /* Rosa chiaro */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Titoli */
+h2 {
+  text-align: center;
+  color: #d147a3; /* Rosa scuro */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Tabella dei dettagli */
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.details-table th,
+.details-table td {
+  padding: 12px 15px;
+  border: 1px solid #d147a3; /* Rosa scuro */
+  text-align: left;
+  color: #555;
+}
+
+.details-table th {
+  background-color: #f8bbd0; /* Rosa molto chiaro */
+  color: #d147a3; /* Rosa scuro */
+}
+
+.details-table td {
+  background-color: #ffe6f2; /* Rosa chiaro */
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Etichette */
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #d147a3; /* Rosa scuro */
+}
+
+input, select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #d147a3; /* Rosa scuro */
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #ffe6f2; /* Rosa chiaro */
+}
+
+input[type="date"] {
+  max-width: 200px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-top: 10px;
+}
+
+/* Pulsanti */
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #d147a3; /* Rosa scuro */
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #c13592; /* Rosa ancora più scuro */
+}
+
+button[ng-click="confirmDelete()"] {
+  background-color: #f06292; /* Rosa medio */
+  color: white;
+}
+
+button[ng-click="confirmDelete()"]:hover {
+  background-color: #ec407a; /* Rosa più scuro */
+}
+
+button[ng-click="router.navigate(['/analysis/list'])"] {
+  background-color: #f48fb1; /* Rosa medio chiaro */
+  color: white;
+}
+
+button[ng-click="router.navigate(['/analysis/list'])"]:hover {
+  background-color: #f06292; /* Rosa medio */
+}
+
+/* Allineamento centrale */
+.text-center {
+  text-align: center;
+}
+
+/* Margini per gli spazi */
+.margin-bottom {
+  margin-bottom: 20px;
+}

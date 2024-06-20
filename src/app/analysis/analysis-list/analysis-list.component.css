@@ -20,11 +20,40 @@ button {
   margin-right: 5px;
   padding: 5px 10px;
   border: none;
-  background-color: #007bff;
+  background-color: #860a73;
   color: white;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #7a1370;
 }
+
+/* Definisci i colori personalizzati per i bottoni */
+.custom-button-primary {
+  background-color: #b23eb9; /* Primary color */
+  color: white;
+}
+
+.custom-button-primary:hover {
+  background-color: #b51295; /* Darker primary color on hover */
+}
+
+.custom-button-accent {
+  background-color: #e91e63; /* Accent color */
+  color: white;
+}
+
+.custom-button-accent:hover {
+  background-color: #d81b60; /* Darker accent color on hover */
+}
+
+.custom-button-warn {
+  background-color: #f4367f; /* Warn color */
+  color: white;
+}
+
+.custom-button-warn:hover {
+  background-color: #d72d9eb7; /* Darker warn color on hover */
+}
+

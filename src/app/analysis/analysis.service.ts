@@ -16,7 +16,15 @@ export class AnalysisService {
     return this.http.get<Analysis[]>(this.apiUrl);
   }
 
-  getAnalisiById(id: number): Observable<Analysis> {
+  getAnalisiById(id: string): Observable<Analysis> {
     return this.http.get<Analysis>(`${this.apiUrl}/${id}`);
+  }
+
+  updateAnalisi(analisi: Analysis){
+    return this.http.put<Analysis>(this.apiUrl,analisi);
+  }
+
+  deleteAnalisi(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

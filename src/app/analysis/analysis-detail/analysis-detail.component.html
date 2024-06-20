@@ -1,1 +1,56 @@
-<p>analysis-detail works!</p>
+<div *ngIf="analysis">
+  <div *ngIf="action === 'view'">
+      <h2>Dettagli Analisi</h2>
+      <table class="details-table">
+        <tr>
+          <th>Tipo</th>
+          <td>{{ analysis.tipo }}</td>
+        </tr>
+        <tr>
+          <th>Data</th>
+          <td>{{ analysis.data }}</td>
+        </tr>
+        <tr>
+          <th>Paziente</th>
+          <td>{{ analysis.paziente?.nome }} {{ analysis.paziente?.cognome }}</td>
+        </tr>
+        <tr>
+          <th>Esito Positivo</th>
+          <td>{{ analysis.esitoPositivo ? 'Sì' : 'No' }}</td>
+        </tr>
+      </table>
+    </div>
+
+  <div *ngIf="action === 'edit'">
+    <h2>Modifica Analisi</h2>
+    <form (ngSubmit)="updateAnalysis()">
+      <label>
+        Tipo:
+        <select [(ngModel)]="analysis.tipo" name="tipo">
+          <option *ngFor="let tipo of tipos" [value]="tipo">{{ tipo }}</option>
+        </select>
+      </label>
+      <label>
+        Data:
+        <input [(ngModel)]="analysis.data" name="data" type="date">
+      </label>
+      <label>
+        Paziente:
+        <input [(ngModel)]="analysis.paziente!.nome" name="nome" placeholder="Nome">
+        <input [(ngModel)]="analysis.paziente!.cognome" name="cognome" placeholder="Cognome">
+      </label>
+      <label>
+        Esito Positivo:
+        <input type="checkbox" [(ngModel)]="analysis.esitoPositivo" name="esitoPositivo">
+      </label>
+      <button type="submit">Salva</button>
+    </form>
+  </div>
+
+  <div *ngIf="action === 'delete'">
+    <h2>Conferma Eliminazione</h2>
+    <p>Sei sicuro di voler eliminare questa analisi?</p>
+    <button (click)="confirmDelete()">Elimina</button>
+    <button (click)="router.navigate(['/analysis/list'])">Annulla</button>
+  </div>
+</div>
