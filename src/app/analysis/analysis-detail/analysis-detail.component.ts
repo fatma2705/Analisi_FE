@@ -9,11 +9,12 @@ import { NgModel } from '@angular/forms';
 import { TipoAnalisi } from '../../models/tipo-analisi.model';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
+import { NavbarComponent } from '../../navbar/navbar.component';
 
 @Component({
   selector: 'app-analysis-detail',
   standalone: true,
-  imports: [NgIf,NgFor,FormsModule],
+  imports: [NgIf,NgFor,FormsModule,NavbarComponent],
   templateUrl: './analysis-detail.component.html',
   styleUrl: './analysis-detail.component.css'
 })

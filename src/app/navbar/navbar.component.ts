@@ -13,11 +13,6 @@ import { FormsModule } from '@angular/forms';
 export class NavbarComponent {
   searchQuery: string = '';
 
-  onSearch() {
-    console.log('Searching for:', this.searchQuery);
-    // Implementa la logica di ricerca
-  }
-
   onLogout() {
     console.log('Logout');
     // Implementa la logica di logout
