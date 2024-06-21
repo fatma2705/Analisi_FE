@@ -1,68 +1,63 @@
-/* Stili di base per il navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #43062c;
-  padding: 10px 20px;
-  font-family: Arial, sans-serif;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #c40e69ef; /* Colore rosa per la navbar */
+  color: white;
 }
 
-/* Logo del navbar */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-logo img {
   height: 40px;
 }
 
-/* Stili per la lista dei link */
-.navbar-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.navbar-button {
+  margin-left: 10px;
 }
 
-.navbar-links li {
-  margin: 0 10px;
-}
-
-/* Stili per i link */
-.navbar-links a {
-  text-decoration: none;
-  color: white;
-  padding: 8px 16px;
-  transition: background-color 0.3s;
-}
-
-.navbar-links a:hover {
-  background-color: #da3ab8;
-  border-radius: 4px;
-}
-
-/* Stili per le azioni del navbar */
-.navbar-actions {
+.navbar-search {
   display: flex;
   align-items: center;
 }
 
-.navbar-actions button {
-  background-color: #c730d5;
-  color: white;
+.navbar-search input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #fff; /* Bordo bianco */
+  border-radius: 5px; /* Angoli arrotondati */
+  color: #333; /* Colore del testo */
+}
+
+.navbar-search button,
+.pink-button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #ff69b4; /* Colore rosa per i bottoni */
   border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px; /* Angoli arrotondati */
+}
+
+.navbar-actions button {
+  background-color: #ff69b4; /* Colore rosa per il bottone di logout */
+  border: none;
+  color: white;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 5px; /* Angoli arrotondati */
 }
 
-.navbar-actions button:hover {
-  background-color: #a42f7d;
+.pink-button:hover {
+  background-color: #ff85c1; /* Colore rosa più chiaro per il hover */
 }
 
-/* Risoluzione dei problemi di nidificazione dell'elemento <a> */
-.navbar-actions button a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar-actions button a:hover {
-  color: white;
+input::placeholder {
+  color: #fff; /* Colore del placeholder */
+  opacity: 0.7; /* Opacità del placeholder */
 }

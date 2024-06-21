@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
@@ -11,11 +11,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+searchTerm: any;
+  constructor(private router: Router){}
+
   searchQuery: string = '';
 
   onLogout() {
-    console.log('Logout');
-    // Implementa la logica di logout
+    console.log('Logout button clicked');
+    this.router.navigate(['/home']);
+  }
+
+  search() {
+    console.log('search');
   }
 }
 

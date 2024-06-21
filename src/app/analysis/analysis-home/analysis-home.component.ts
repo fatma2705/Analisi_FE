@@ -26,7 +26,7 @@ constructor(private router: Router, private authService: AuthService) { }
   }
 
   onClickButton1() {
-    console.log('Button 1 clicked');
+    console.log('Button visualizza analisi clicked');
      if (this.authService.isLoggedIn()) {
           this.router.navigate(['/analysis/list']);
         }

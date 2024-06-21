@@ -1,15 +1,19 @@
 <nav class="navbar">
-  <div class="navbar-logo">
-    <img src="../assets/navbar.png" alt="Analisi" />
+  <div class="navbar-left">
+    <div class="navbar-logo">
+      <img src="../assets/navbar.png" alt="Analisi" />
+    </div>
+    <div class="navbar-button">
+      <button mat-mini-fab routerLink="/analysis/home" aria-label="Example icon button with a home icon" class="pink-button">
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
   </div>
-  <ul class="navbar-links">
-    <li><a routerLink="/analysis/home">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-<li><a routerLink="/about">Services</a></li>
-<li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/contact">Blog</a></li>
-  </ul>
+  <div class="navbar-search">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search..." />
+    <button (click)="search()" class="pink-button">Search</button>
+  </div>
   <div class="navbar-actions">
-    <button>Logout <a routerLink="/"></a></button>
+    <button (click)="onLogout()" class="pink-button">Logout</button>
   </div>
 </nav>
