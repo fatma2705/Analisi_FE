@@ -8,12 +8,17 @@
         <mat-icon>home</mat-icon>
       </button>
     </div>
-  </div>
-  <div class="navbar-search">
-    <input type="text" [(ngModel)]="searchTerm" placeholder="Search..." />
-    <button (click)="search()" class="pink-button">Search</button>
+    <div class="navbar-button">
+      <button (click)="goBack()" class="pink-button">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+    </div>
   </div>
   <div class="navbar-actions">
+    <div class="user-info">
+      <span>{{ userName }}</span>
+      <mat-icon>person</mat-icon>
+    </div>
     <button (click)="onLogout()" class="pink-button">Logout</button>
   </div>
 </nav>

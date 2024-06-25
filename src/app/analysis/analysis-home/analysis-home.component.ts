@@ -12,7 +12,7 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class AnalysisHomeComponent {
 
-    userName: string = 'ospite';
+    userName: string = '';
 
 constructor(private router: Router, private authService: AuthService) { }
 

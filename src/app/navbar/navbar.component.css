@@ -20,23 +20,23 @@
   margin-left: 10px;
 }
 
-.navbar-search {
+.navbar-actions {
   display: flex;
   align-items: center;
 }
 
-.navbar-search input {
-  padding: 5px;
-  font-size: 16px;
-  border: 1px solid #fff; /* Bordo bianco */
-  border-radius: 5px; /* Angoli arrotondati */
-  color: #333; /* Colore del testo */
+.navbar-actions .user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
-.navbar-search button,
+.navbar-actions .user-info span {
+  margin-right: 5px;
+}
+
 .pink-button {
   padding: 5px 10px;
-  margin-left: 5px;
   background-color: #ff69b4; /* Colore rosa per i bottoni */
   border: none;
   color: white;
@@ -44,17 +44,12 @@
   border-radius: 5px; /* Angoli arrotondati */
 }
 
-.navbar-actions button {
-  background-color: #ff69b4; /* Colore rosa per il bottone di logout */
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px; /* Angoli arrotondati */
-}
-
 .pink-button:hover {
   background-color: #ff85c1; /* Colore rosa più chiaro per il hover */
+}
+
+.navbar-button button {
+  margin-left: 10px;
 }
 
 input::placeholder {

@@ -92,14 +92,43 @@ button[type="submit"]:hover {
   background-color: #c13592; /* Rosa ancora più scuro */
 }
 
-button[ng-click="confirmDelete()"] {
+/* Stili per la parte di eliminazione */
+
+.delete-button {
   background-color: #f06292; /* Rosa medio */
   color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button[ng-click="confirmDelete()"]:hover {
+.delete-button:hover {
   background-color: #ec407a; /* Rosa più scuro */
 }
+
+.cancel-button {
+  background-color: #f48fb1; /* Rosa medio chiaro */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #f06292; /* Rosa medio */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 
 button[ng-click="router.navigate(['/analysis/list'])"] {
   background-color: #f48fb1; /* Rosa medio chiaro */

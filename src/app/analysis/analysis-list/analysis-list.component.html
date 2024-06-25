@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+<app-filter-bar (filter)="applyFilter($event)"></app-filter-bar>
 <div class="analisi-list-container">
   <h2>Lista Analisi</h2>
   <table>
@@ -6,28 +7,28 @@
       <tr>
         <th>Tipo</th>
         <th>Data</th>
-        <th>Paziente</th>
         <th>Esito Positivo</th>
-        <th>Azioni</th>
+        <th>Note</th>
+        <th class="actions-column">Azioni</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let analysis of analysis">
         <td>{{ analysis.tipo }}</td>
         <td>{{ analysis.data }}</td>
-        <td>{{ analysis.paziente?.nome }} {{ analysis.paziente?.cognome }}</td>
         <td>{{ analysis.esitoPositivo ? 'Sì' : 'No' }}</td>
-        <td>
-  <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'edit']" class="custom-button-primary">
-    <mat-icon>edit</mat-icon>
-  </button>
-  <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'view']" class="custom-button-accent">
-    <mat-icon>visibility</mat-icon>
-  </button>
-  <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'delete']" class="custom-button-warn">
-    <mat-icon>delete</mat-icon>
-  </button>
-</td>
+        <td>{{ analysis.paziente?.nome }} {{ analysis.paziente?.cognome }}</td>
+        <td class="actions-column">
+          <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'edit']" class="custom-button-primary">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'view']" class="custom-button-accent">
+            <mat-icon>visibility</mat-icon>
+          </button>
+          <button mat-icon-button [routerLink]="['/analysis', analysis.id, 'delete']" class="custom-button-warn">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

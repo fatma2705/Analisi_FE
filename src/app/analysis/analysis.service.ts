@@ -27,4 +27,10 @@ export class AnalysisService {
   deleteAnalisi(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  searchAnalisi(example: Analysis): Observable<Analysis[]> {
+    const url = `${this.apiUrl}/search`;
+    return this.http.post<Analysis[]>(url, example);
+  }
+
 }

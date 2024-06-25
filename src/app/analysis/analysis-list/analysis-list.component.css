@@ -57,3 +57,16 @@ button:hover {
   background-color: #d72d9eb7; /* Darker warn color on hover */
 }
 
+/* Stili per centrare i bottoni nella colonna Azioni */
+.actions-column {
+  text-align: center; /* Centra il testo e i bottoni */
+  vertical-align: middle; /* Centra verticalmente */
+}
+
+.button-container {
+  display: inline-block; /* Necessario per il centramento automatico */
+}
+
+.actions-column button {
+  margin: 0 5px; /* Spaziatura tra i bottoni */
+}

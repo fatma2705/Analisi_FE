@@ -1,0 +1,25 @@
+<div class="filter-bar">
+  <div class="filter-group">
+    <label for="tipo">Tipo di Analisi:</label>
+    <select id="tipo" [(ngModel)]="filterCriteria.tipo">
+      <option value="null">Tutti</option>
+      <option *ngFor="let tipo of tipiAnalisi" [value]="tipo">{{ tipo }}</option>
+    </select>
+  </div>
+  
+  <div class="filter-group">
+    <label for="esito">Esito Positivo:</label>
+    <select id="esito" [(ngModel)]="filterCriteria.esitoPositivo">
+      <option value="null">Tutti</option>
+      <option value="true">Sì</option>
+      <option value="false">No</option>
+    </select>
+  </div>
+  
+  <div class="filter-group">
+    <label for="data">Data:</label>
+    <input id="data" type="date" [(ngModel)]="filterCriteria.data">
+  </div>
+  
+  <button (click)="applyFilters()" class="custom-button-primary">Cerca</button>
+</div>
