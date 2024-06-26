@@ -27,10 +27,18 @@ export class LoginComponent {
   onSubmit() {
   if (this.loginForm.valid) {
     console.log(this.loginForm.value);
+    console.log(this.authService.getCurrentUser)
     this.authService.login(this.loginForm.value).subscribe({
       next: (data: any) => {
         if (this.authService.isLoggedIn()) {
-          this.router.navigate(['/analysis/home']);
+
+          if (this.authService.getCurrentUser().includes('ROLE_ADMIN')){
+            this.router.navigate(['admin']);
+          }else {
+              this.router.navigate(['/analysis/home']);
+          }
+          
+          
         }
         console.log(data);
       },

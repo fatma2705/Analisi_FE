@@ -63,5 +63,12 @@ export class AuthService {
      const decodedToken: any = jwtDecode(token);
       return decodedToken.nome; 
    }
+
+   getCurrentUser() {
+    const token = this.tokenStorage;
+     const decodedToken: any = jwtDecode(token);
+     console.log(decodedToken.currentUser);
+      return decodedToken.currentUser; 
+  }
 }
 
