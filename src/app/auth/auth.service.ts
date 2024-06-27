@@ -70,5 +70,13 @@ export class AuthService {
      console.log(decodedToken.currentUser);
       return decodedToken.currentUser; 
   }
+
+  isAdmin(): boolean {
+    if (this.getCurrentUser().includes('ROLE_ADMIN')){
+      return true;
+    }else {
+      return false;
+    }
+  }
 }
 

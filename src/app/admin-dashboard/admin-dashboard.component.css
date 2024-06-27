@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: space-around; /* Allinea i div orizzontalmente con spazio tra di loro */
+  align-items: center; /* Allinea i div verticalmente al centro */
+  padding: 125px;
+}
+
+.welcome-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+
+
+.section {
+  text-align: center;
+  margin: 20px;
+  width: 40%; /* Imposta una larghezza fissa per le sezioni */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.phrase {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.btn {
+  margin: 5px;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+
