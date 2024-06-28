@@ -35,6 +35,11 @@ export class AnalysisService {
     return this.http.post<Analysis[]>(url, example);
   }
 
+
+  addAnalisi(example: Analysis){
+    return this.http.post<Analysis>(this.apiUrl,example);
+  }
+
   private handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
@@ -56,6 +61,8 @@ export class AnalysisService {
       return throwError(new Error('Non sei autorizzato ad accedere a questa risorsa.'));
     }
   }
+
+
 
 
 

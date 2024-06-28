@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalysisService } from '../analysis.service';
 import { Analysis } from '../../models/analysis.model';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { NavbarComponent } from '../../navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,7 +14,7 @@ import { AuthService } from '../../auth/auth.service';
   standalone: true,
   templateUrl: './analysis-list.component.html',
   styleUrl: './analysis-list.component.css',
-  imports: [NgFor, NavbarComponent, MatIconModule, MatButtonModule, RouterLink, FilterBarComponent]
+  imports: [NgFor, NavbarComponent, MatIconModule, MatButtonModule, RouterLink, FilterBarComponent,NgIf]
 })
 export class AnalysisListComponent implements OnInit {
 
@@ -26,6 +26,10 @@ export class AnalysisListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllAnalysis();
+  }
+
+  isAdmin(): boolean {
+    return this.authService.isAdmin();
   }
 
   getAllAnalysis(): void {

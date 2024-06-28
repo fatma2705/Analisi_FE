@@ -70,3 +70,20 @@ button:hover {
 .actions-column button {
   margin: 0 5px; /* Spaziatura tra i bottoni */
 }
+
+.actions-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.actions-header .action-text {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #060506; /* Rosa */
+}
+
+.actions-header button {
+  background-color: #e91e63; /* Rosa */
+  color: #fff;
+}

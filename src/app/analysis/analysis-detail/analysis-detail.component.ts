@@ -70,4 +70,16 @@ export class AnalysisDetailComponent {
     }
   }
 
+  addAnalysis(): void {
+    if (this.analysis) {
+      if (this.authService.isLoggedIn()) {
+        this.analisiService.addAnalisi(this.analysis).subscribe(() => {
+          this.snackBar.open('Analisi aggiunta con successo', 'Chiudi', { duration: 3000 });
+          this.router.navigate(['/analysis/list']);
+        });
+      }
+    }
+  }
+
+
 }
